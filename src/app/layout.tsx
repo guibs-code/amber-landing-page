@@ -20,9 +20,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Amber - Your Personal Finance Dashboard",
+  title: "Amber - Your Personal Finance Manager",
   description:
-    "Take control of your finances with Amber. Track expenses, manage budgets, and visualize your financial health all in one beautiful, intuitive dashboard. Join the waitlist today!",
+    "Take control of your finances with Amber. Track expenses, manage budgets, and forecast health all in one beautiful, intuitive dashboard. Join the waitlist today!",
 };
 
 export default function RootLayout({
