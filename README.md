@@ -1,5 +1,3 @@
-Just a test
-
 # 🟡 Amber - Personal Finance Landing Page
 
 A beautiful, secure waitlist landing page for Amber personal finance app, built with Next.js 15, TypeScript, and Tailwind CSS.
