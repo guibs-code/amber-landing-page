@@ -132,7 +132,7 @@ export default function Home() {
 
               {/* Waitlist Form */}
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-lg mx-auto lg:mx-0">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-lg mx-auto lg:mx-0" suppressHydrationWarning>
                   <input
                     type="email"
                     placeholder="Enter your email"
@@ -142,6 +142,7 @@ export default function Home() {
                     className="flex-1 bg-white/5 backdrop-blur-sm border border-white/10 text-[#FEFEFD] placeholder:text-[#86827C] focus:border-[#FEB204] focus:bg-white/10 font-sans px-3 md:px-4 py-2.5 md:py-3 rounded-lg outline-none transition-all duration-200 shadow-lg text-sm md:text-base"
                     required
                     disabled={isSubmitting}
+                    suppressHydrationWarning
                   />
                   {/* Honeypot field - hidden from users */}
                   <input
