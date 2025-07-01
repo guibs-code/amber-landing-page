@@ -208,14 +208,14 @@ export default function Home() {
           {/* Right Column - Mockup Image */}
           <div className="relative flex justify-center lg:justify-end order-first lg:order-last">
             <div className="relative">
-        <Image
+              <Image
                 src="/amber_mockup.png"
                 alt="Amber Finance Dashboard"
                 width={1200}
                 height={900}
                 className="w-full h-auto max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-3xl relative z-10"
-          priority
-        />
+                priority
+              />
               {/* Bottom shadow */}
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-4/5 h-4 bg-black/20 blur-lg rounded-full"></div>
             </div>
