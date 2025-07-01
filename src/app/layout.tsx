@@ -21,7 +21,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Amber - Your Personal Finance Dashboard",
-  description: "Take control of your finances with Amber. Track expenses, manage budgets, and visualize your financial health all in one beautiful, intuitive dashboard. Join the waitlist today!",
+  description:
+    "Take control of your finances with Amber. Track expenses, manage budgets, and visualize your financial health all in one beautiful, intuitive dashboard. Join the waitlist today!",
 };
 
 export default function RootLayout({
@@ -36,7 +37,11 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        <script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          async
+          defer
+        ></script>
       </body>
     </html>
   );

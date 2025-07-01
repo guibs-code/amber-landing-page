@@ -92,13 +92,14 @@ Open [http://localhost:3000](http://localhost:3000) to see the landing page.
    - Add both `ambermoney.co` and `www.ambermoney.co`
 
 2. **Configure DNS at Your Registrar**:
+
    ```dns
    # For apex domain (ambermoney.co)
    Type: A
    Name: @ (or leave blank)
    Value: 76.76.19.19
    TTL: 300 (or Auto)
-   
+
    # For www subdomain
    Type: CNAME
    Name: www
@@ -122,6 +123,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the landing page.
 ### Domain Verification
 
 After DNS propagation (can take up to 48 hours):
+
 - ✅ `https://ambermoney.co` should load your site
 - ✅ `https://www.ambermoney.co` should redirect to apex domain
 - ✅ Form submissions should work with Turnstile
@@ -139,40 +141,18 @@ After DNS propagation (can take up to 48 hours):
 ## 📊 Analytics & Tracking
 
 ### Vercel Analytics (Included)
+
 - Real-time visitor tracking
 - Page views and unique visitors
 - Referral sources and conversion rates
 - 50,000 events/month on free tier
-
-### Custom Event Tracking
-
-**⚠️ Important:** Custom events require Vercel Pro plan ($20/month).
-
-**On Hobby Plan (Free):**
-- ✅ Page views and visitor analytics 
-- ✅ Basic conversion tracking (thank you page visits)
-- ❌ Custom form interaction events
-
-**On Pro Plan ($20/month):**
-```typescript
-// Available custom events:
-'email_field_focused'        // User clicks email input
-'email_field_completed'      // User enters valid email
-'waitlist_submitted_success' // Form submitted successfully  
-'waitlist_submitted_error'   // Form submission failed
-
-// Calculate conversion rates:
-// Abandonment = focused - completed
-// Conversion = success / focused
-```
-
-**Recommendation:** Start with free Hobby plan, upgrade to Pro when you need detailed funnel analytics.
 
 ## 🚀 Deployment
 
 ### Deploy to Vercel (Recommended)
 
 1. **Push to GitHub**:
+
    ```bash
    git add .
    git commit -m "Initial commit"
@@ -191,12 +171,13 @@ After DNS propagation (can take up to 48 hours):
    - In Vercel project settings → Domains
    - Add `ambermoney.co` and `www.ambermoney.co`
    - Configure DNS records at your domain registrar:
+
      ```dns
      # For apex domain (ambermoney.co)
      Type: A
      Name: @
      Value: 76.76.19.19
-     
+
      # For www subdomain
      Type: CNAME
      Name: www
@@ -210,6 +191,7 @@ After DNS propagation (can take up to 48 hours):
 ### Alternative Deployment
 
 The app can be deployed to any platform that supports Next.js:
+
 - Netlify
 - Railway
 - DigitalOcean App Platform
@@ -217,16 +199,19 @@ The app can be deployed to any platform that supports Next.js:
 ## 🎨 Customization
 
 ### Brand Colors
+
 - Primary: `#FEB204` (Amber)
 - Background: `#1C1917` (Dark stone)
 - Text: `#FEFEFD` (Off-white)
 - Secondary: `stone-400/500/600` (Grays)
 
 ### Typography
+
 - Brand: Gambarino (serif) - loaded from `/public/fonts/`
 - Body: Inter (sans-serif) - loaded via Google Fonts
 
 ### Social Links
+
 Update social media links in `src/app/thank-you/page.tsx`:
 
 ```typescript
@@ -256,56 +241,27 @@ src/
     └── utils.ts               # Utility functions
 ```
 
-## 🧪 Testing
-
-### Local Testing
-```bash
-# Test form submission
-pnpm dev
-# Navigate to localhost:3000
-# Submit test email and verify:
-# - Turnstile loads
-# - Form submits successfully
-# - Redirects to thank you page
-# - Check Formspark dashboard
-```
-
-### Production Testing
-1. Deploy to production
-2. Test with real email addresses
-3. Verify analytics tracking
-4. Check spam protection works
-
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
 **Form not submitting:**
+
 - Check browser console for errors
 - Verify environment variables are set
 - Ensure Turnstile script loads
 
 **Turnstile not loading:**
+
 - Verify domain is added to Cloudflare settings
 - Check site key is correct
 - Disable ad blockers for testing
 
 **Analytics not working:**
+
 - Ensure deployed on Vercel
 - Wait 24 hours for data to appear
 - Check Vercel dashboard
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/new-feature`
-3. Commit changes: `git commit -m 'Add new feature'`
-4. Push to branch: `git push origin feature/new-feature`
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 

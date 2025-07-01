@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Gambarino';
-  src: url('/fonts/Gambarino-Regular.otf') format('opentype');
+  font-family: "Gambarino";
+  src: url("/fonts/Gambarino-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --background: #1C1917;
-  --foreground: #FEFEFD;
+  --background: #1c1917;
+  --foreground: #fefefd;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1C1917;
-    --foreground: #FEFEFD;
+    --background: #1c1917;
+    --foreground: #fefefd;
   }
 }
 
@@ -28,5 +28,9 @@ body {
 
 /* Custom radial gradient */
 .bg-gradient-radial {
-  background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(
+    circle at bottom,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
 }
